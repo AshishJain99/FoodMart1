@@ -18,7 +18,7 @@ extension CDCategory {
 
     @NSManaged public var id: Int16
     @NSManaged public var name: String?
-    @NSManaged public var items: NSSet?
+    @NSManaged public var items: Set<CDItem>?
 
 }
 
@@ -32,10 +32,10 @@ extension CDCategory {
     @NSManaged public func removeFromItems(_ value: CDItem)
 
     @objc(addItems:)
-    @NSManaged public func addToItems(_ values: NSSet)
+    @NSManaged public func addToItems(_ values: Set<CDItem>)
 
     @objc(removeItems:)
-    @NSManaged public func removeFromItems(_ values: NSSet)
+    @NSManaged public func removeFromItems(_ values: Set<CDItem>)
 
 }
 
