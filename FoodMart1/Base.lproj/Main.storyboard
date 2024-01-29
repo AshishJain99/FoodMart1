@@ -23,16 +23,40 @@
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SB5-Aj-wI0">
                                         <rect key="frame" x="343" y="0.0" width="50" height="50"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vbJ-Wk-L0J">
+                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
                                         <color key="backgroundColor" systemColor="systemRedColor"/>
                                         <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="vbJ-Wk-L0J" secondAttribute="bottom" id="FwP-cA-dMu"/>
+                                            <constraint firstItem="vbJ-Wk-L0J" firstAttribute="leading" secondItem="SB5-Aj-wI0" secondAttribute="leading" id="KdL-pO-yp5"/>
+                                            <constraint firstItem="vbJ-Wk-L0J" firstAttribute="top" secondItem="SB5-Aj-wI0" secondAttribute="top" id="eGG-5U-UVZ"/>
                                             <constraint firstAttribute="width" secondItem="SB5-Aj-wI0" secondAttribute="height" multiplier="1:1" id="j7k-w2-cK2"/>
+                                            <constraint firstAttribute="trailing" secondItem="vbJ-Wk-L0J" secondAttribute="trailing" id="qui-Gm-imw"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LfP-hQ-mDu">
                                         <rect key="frame" x="293" y="0.0" width="50" height="50"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IKw-Gk-soC">
+                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
                                         <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                         <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="IKw-Gk-soC" secondAttribute="trailing" id="DGx-X1-qnS"/>
                                             <constraint firstAttribute="width" secondItem="LfP-hQ-mDu" secondAttribute="height" multiplier="1:1" id="EOi-Vh-JNi"/>
+                                            <constraint firstItem="IKw-Gk-soC" firstAttribute="leading" secondItem="LfP-hQ-mDu" secondAttribute="leading" id="L9u-ZK-Kea"/>
+                                            <constraint firstAttribute="bottom" secondItem="IKw-Gk-soC" secondAttribute="bottom" id="R5c-uw-uAp"/>
+                                            <constraint firstItem="IKw-Gk-soC" firstAttribute="top" secondItem="LfP-hQ-mDu" secondAttribute="top" id="Y7C-tr-9wO"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -239,22 +263,22 @@
     <resources>
         <image name="plus" catalog="system" width="128" height="113"/>
         <systemColor name="secondaryLabelColor">
-            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemMintColor">
-            <color red="0.0" green="0.7803921568627451" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.78039215689999997" blue="0.74509803919999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemOrangeColor">
-            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="tertiaryLabelColor">
-            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29803921568627451" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.29803921570000003" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

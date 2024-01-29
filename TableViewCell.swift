@@ -21,6 +21,8 @@ class TableViewCell: UITableViewCell {
         }
     }
     
+    weak var delegate:MainTableViewCellDelegate?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -107,9 +109,18 @@ extension TableViewCell:UICollectionViewDelegate,UICollectionViewDataSource{
     
     func handleAddButtonTap(at indexPath: IndexPath) {
         print("Button tapped in collection view cell at indexPath: \(indexPath)")
+        guard let productId = productItemData?[indexPath.item].id else{return}
+        delegate?.didAddedItem(productId: productId)
     }
     
     func handleFavoriteTap(at indexPath: IndexPath) {
         print("Button tapped in collection view cell at indexPath: \(indexPath)")
+        guard let productId = productItemData?[indexPath.item].id else{return}
+        delegate?.didTappedLike(productId: productId)
     }
+}
+
+protocol MainTableViewCellDelegate:AnyObject{
+    func didTappedLike(productId:Int)
+    func didAddedItem(productId:Int)
 }

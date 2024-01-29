@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CoreData
 
 class ViewController: UIViewController {
 
@@ -100,6 +101,7 @@ extension ViewController:UITableViewDelegate,UITableViewDataSource{
             
              let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! TableViewCell
             cell.productItemData = tableCellData[indexPath.section].productCategory.items
+            cell.delegate = self
             return cell
         }
         
@@ -132,6 +134,48 @@ extension ViewController:UITableViewDelegate,UITableViewDataSource{
 //    }
     
     
+}
+extension ViewController:MainTableViewCellDelegate {
+    func didTappedLike(productId: Int) {
+        print(productId)
+        getCDItem(byIdentifier: productId) { cdItem in
+            print(cdItem?.name)
+        }
+        
+    }
+    
+    func didAddedItem(productId: Int) {
+        print(productId)
+    }
+    
+    
+    
+    
+}
+
+extension ViewController{
+    private func getCDItem(byIdentifier id: Int, completion:@escaping(_ cdItem:CDItem?)->Void)
+    {
+        DispatchQueue.main.async {
+            let fetchRequest = NSFetchRequest<CDItem>(entityName: "CDItem")
+            let predicate = NSPredicate(format: "id == %d", id)
+
+            fetchRequest.predicate = predicate
+            do {
+                let result = try PersistentStorage.shared.context.fetch(fetchRequest).first
+
+                guard result != nil else {return completion(nil)}
+
+                completion(result)
+
+            } catch let error {
+                debugPrint(error)
+            }
+
+            completion(nil)
+        }
+        
+    }
 }
 
 struct cellData{
